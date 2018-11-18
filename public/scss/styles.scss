@@ -1,0 +1,84 @@
+html,
+body {
+  user-select: none;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5rem;
+  color: #1b1b1b;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsla(285, 25%, 95%, 1);
+}
+
+.card {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2rem;
+  height: 360px;
+  width: 240px;
+  box-shadow: 1px 2px 4px hsla(270, 10%, 70%, 1);
+
+  .card-exterior {
+    z-index: -2;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-out;
+    transform-origin: 0 0;
+    background: linear-gradient(
+          45deg,
+          hsla(255, 25%, 50%, 0.1) 8px,
+          hsla(0, 0%, 100%, 0.5) 1%
+        )
+        center,
+      linear-gradient(
+          315deg,
+          hsla(330, 100%, 95%, 0.5) 8px,
+          hsla(270, 100%, 75%, 0.5) 1%
+        )
+        center,
+      hsla(255, 100%, 50%, 0.5);
+    background-size: 10px 12px;
+
+    .card-exterior-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: -1;
+      height: 300px;
+      width: 200px;
+      margin: 30px 20px;
+      background-color: hsla(270, 60%, 90%, 1);
+      box-shadow: inset 1px 1px 2px hsla(270, 10%, 50%, 1);
+    }
+  }
+
+  .card-interior {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -3;
+    height: 360px;
+    width: 240px;
+    padding: 30px 20px;
+    background-color: #fefefe;
+  }
+}
+
+.open {
+  transform: rotateY(180deg);
+}
+
+.hide-text {
+  text-indent: -1000em;
+}
