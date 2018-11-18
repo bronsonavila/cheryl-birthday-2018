@@ -52,6 +52,7 @@ body {
     .card-exterior-inner {
       line-height: 2.5rem;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       z-index: -1;
@@ -60,6 +61,11 @@ body {
       margin: 30px 20px;
       background-color: hsla(270, 60%, 90%, 1);
       box-shadow: inset 1px 1px 2px hsla(270, 10%, 50%, 1);
+
+      .card-exterior-inner-top {
+        padding-top: 15px;
+        height: 65px;
+      }
     }
   }
 
