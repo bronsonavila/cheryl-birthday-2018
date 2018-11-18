@@ -1,4 +1,4 @@
-$(window).load(() => {
+$(window).on('load', () => {
   $('body').sakura('start', {
     fallSpeed: 1.5,
     maxSize: 13,
