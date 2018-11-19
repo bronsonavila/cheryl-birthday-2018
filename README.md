@@ -2,4 +2,8 @@
 
 A birthday card for Cheryl.
 
+## Attributions
+
 Flower petals by [jQuery-Sakura](https://github.com/almightynay/jQuery-Sakura/).
+
+Emoji by [Twitter](https://twemoji.twitter.com/).
