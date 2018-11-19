@@ -125,6 +125,7 @@ body {
 
 .open {
   transform: rotateY(180deg);
+  box-shadow: 0 2px 4px hsla(270, 10%, 70%, 1);
 }
 
 .hide {
