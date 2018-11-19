@@ -4,6 +4,7 @@ const cardExteriorContentFront = $('.card-exterior-content-front');
 const cardExteriorContentBack = $('.card-exterior-content-back');
 
 function toggleCard() {
+  // Open/close card on click/tap:
   if (!cardExterior.hasClass('open')) {
     cardExterior.addClass('open');
     window.setTimeout(() => {
@@ -23,11 +24,21 @@ function toggleCard() {
       cardExteriorContentBack.addClass('hide');
     }, 225);
   }
+
+  // Remove click/tap listeners for 500ms (prevents click spamming):
+  $('.card').off('click');
+  $('.card').off('tap');
+  window.setTimeout(() => {
+    $('.card').click(toggleCard);
+    $('.card').on('tap', toggleCard);
+  }, 500);
 }
 
+// Set initial event listeners:
 $('.card').click(toggleCard);
 $('.card').on('tap', toggleCard);
 
+// Apply custom configuration settings to jQuery-Sakura:
 $(window).on('load', () => {
   $('body').sakura('start', {
     fallSpeed: 1.5,
