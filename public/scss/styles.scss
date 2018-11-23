@@ -47,7 +47,7 @@ body {
       position: relative;
       display: flex;
       flex-direction: column;
-      line-height: 2.5rem;
+      line-height: 2.25rem;
       height: 300px;
       width: 200px;
       margin: 24px 20px;
@@ -56,9 +56,13 @@ body {
 
       .card-exterior-content-front {
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
 
         .card-exterior-content-front-top {
-          padding-top: 15px;
+          padding-top: 20px;
           height: 65px;
         }
 
@@ -69,6 +73,10 @@ body {
           * {
             height: 36px;
           }
+        }
+
+        .card-exterior-content-middle {
+          padding-bottom: 5px;
         }
       }
 
