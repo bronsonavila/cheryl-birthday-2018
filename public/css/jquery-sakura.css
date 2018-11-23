@@ -3,6 +3,9 @@
     opacity: 0.9;
     top: 0;
   }
+  67% {
+    opacity: 0.5;
+  }
   100% {
     opacity: 0;
     top: 100%;
@@ -13,6 +16,9 @@
   0% {
     opacity: 0.9;
     top: 0;
+  }
+  67% {
+    opacity: 0.5;
   }
   100% {
     opacity: 0;
