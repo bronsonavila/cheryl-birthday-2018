@@ -131,11 +131,15 @@ body {
   }
 }
 
-.open {
+.card-exterior__open {
   transform: rotateY(180deg);
   box-shadow: 0 2px 4px hsla(270, 10%, 70%, 1);
 }
 
-.hide {
+.card_exterior-content__open {
+  box-shadow: inset 1px 1px 2px hsla(270, 10%, 50%, 1);
+}
+
+.card_exterior-content__hidden {
   opacity: 0;
 }
