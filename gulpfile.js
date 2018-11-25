@@ -10,7 +10,7 @@ const babel = require('gulp-babel');
 const DIST_PATH = './dist';
 const CSS_PATH = './src/css/**/*.css';
 const SCSS_PATH = './src/scss/**/*.scss';
-const SCRIPTS_PATH = './src/scripts/**/*.js';
+const SCRIPTS_PATH = './src/js/**/*.js';
 
 gulp.task('styles', () => {
   console.log('Running styles task');
