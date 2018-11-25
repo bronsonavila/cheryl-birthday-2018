@@ -7,15 +7,15 @@ const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 
-const DIST_PATH = './public/dist';
-const CSS_PATH = './public/css/**/*.css';
-const SCSS_PATH = './public/scss/**/*.scss';
-const SCRIPTS_PATH = './public/scripts/**/*.js';
+const DIST_PATH = './dist';
+const CSS_PATH = './src/css/**/*.css';
+const SCSS_PATH = './src/scss/**/*.scss';
+const SCRIPTS_PATH = './src/scripts/**/*.js';
 
 gulp.task('styles', () => {
   console.log('Running styles task');
   return gulp
-    .src(['./public/css/reset.css', CSS_PATH, SCSS_PATH])
+    .src(['./src/css/reset.css', CSS_PATH, SCSS_PATH])
     .pipe(plumber(err => handleError(err, 'styles')))
     .pipe(
       sass({
@@ -25,7 +25,7 @@ gulp.task('styles', () => {
     .pipe(autoprefixer())
     .pipe(concat('styles.css'))
     .pipe(cleanCSS({ compatability: 'ie8' }))
-    .pipe(gulp.dest(DIST_PATH + '/css'));
+    .pipe(gulp.dest(DIST_PATH));
 });
 
 gulp.task('scripts', () => {
@@ -38,9 +38,9 @@ gulp.task('scripts', () => {
         presets: ['@babel/preset-env']
       })
     )
+    .pipe(concat('bundle.js'))
     .pipe(uglify())
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest(DIST_PATH + '/js'));
+    .pipe(gulp.dest(DIST_PATH));
 });
 
 gulp.task('default', ['styles', 'scripts'], () => {
