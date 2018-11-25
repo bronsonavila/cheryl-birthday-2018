@@ -11,14 +11,14 @@ function toggleCardOpenClose() {
       cardExteriorContent.addClass('card_exterior-content__open');
       cardExteriorContentFront.addClass('card_exterior-content__hidden');
       cardExteriorContentBack.removeClass('card_exterior-content__hidden');
-    }, 165);
+    }, 160);
   } else {
     cardExterior.removeClass('card-exterior__open');
     window.setTimeout(() => {
       cardExteriorContent.removeClass('card_exterior-content__open');
       cardExteriorContentFront.removeClass('card_exterior-content__hidden');
       cardExteriorContentBack.addClass('card_exterior-content__hidden');
-    }, 225);
+    }, 210);
   }
 
   preventClickSpam();
